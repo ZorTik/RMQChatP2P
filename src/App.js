@@ -16,14 +16,8 @@ const handleAmqpCallback = (callback) => {
 const QUEUE_NAME = "chat";
 
 function App() {
-  const recoilMessagesAtom = atom({
-    key: "messages",
-    default: []
-  });
-  const amqpChannelAtom = atom({
-    key: "amqpChannel",
-    default: null
-  });
+  const recoilMessagesAtom = atom({key: "messages", default: []});
+  const amqpChannelAtom = atom({key: "amqpChannel", default: null});
 
   const [messages, setMessages] = useRecoilState(recoilMessagesAtom);
   const [, setAmqpChannel] = useRecoilState(amqpChannelAtom);
