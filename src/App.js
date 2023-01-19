@@ -36,7 +36,7 @@ function App() {
       }));
     }));
   }, []);
-  return <Chat recoilMessagesAtom={recoilMessagesAtom} />;
+  return <Chat recoilMessagesAtom={recoilMessagesAtom} recoilAmqpChannelAtom={amqpChannelAtom} />;
 }
 
 export default App;
